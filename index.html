@@ -1,0 +1,2292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Novelis Korea | Executive English Intensive — Session 1</title>
+<style>
+  :root {
+    --navy: #0F2537;
+    --navy-light: #18364F;
+    --navy-dark: #091724;
+    --teal: #007A68;
+    --teal-hover: #006153;
+    --teal-light: #E6F4F1;
+    --teal-border: #B3DDD6;
+    --bg: #F4F6F9;
+    --surface: #FFFFFF;
+    --surface-alt: #F8FAFC;
+    --border: #E2E8F0;
+    --text: #1E293B;
+    --text-muted: #64748B;
+    --amber: #D97706;
+    --amber-bg: #FFFBEB;
+    --amber-border: #FDE68A;
+    --red: #DC2626;
+    --red-bg: #FEF2F2;
+    --red-border: #FECACA;
+    --blue: #2563EB;
+    --blue-bg: #EFF6FF;
+    --blue-border: #BFDBFE;
+    --shadow-sm: 0 1px 2px rgba(15, 37, 55, 0.05);
+    --shadow-md: 0 4px 12px rgba(15, 37, 55, 0.08);
+    --shadow-lg: 0 12px 28px rgba(15, 37, 55, 0.14);
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HEADER */
+  .app-header {
+    background: var(--navy);
+    color: #FFFFFF;
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    box-shadow: var(--shadow-md);
+    border-bottom: 3px solid var(--teal);
+  }
+
+  .header-inner {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .brand-area {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .brand-badge {
+    width: 44px;
+    height: 44px;
+    background: var(--teal);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .brand-title {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+  }
+
+  .brand-sub {
+    font-size: 12px;
+    color: #CBD5E1;
+    margin-top: 2px;
+  }
+
+  .learner-pills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .learner-pill {
+    background: var(--navy-light);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #FFFFFF;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s ease;
+  }
+
+  .learner-pill:hover {
+    background: var(--teal);
+    border-color: var(--teal);
+  }
+
+  .learner-pill span.role-tag {
+    font-size: 11px;
+    color: #94A3B8;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 2px 7px;
+    border-radius: 999px;
+  }
+
+  .learner-pill:hover span.role-tag {
+    color: #FFFFFF;
+  }
+
+  .header-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* TIMER WIDGET */
+  .timer-box {
+    background: var(--navy-dark);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .timer-display {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 18px;
+    font-weight: 700;
+    color: #34D399;
+    min-width: 58px;
+    text-align: center;
+  }
+
+  .timer-display.warning {
+    color: #FBBF24;
+  }
+
+  .timer-display.expired {
+    color: #F87171;
+  }
+
+  .timer-btn {
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .timer-btn:hover {
+    background: rgba(255, 255, 255, 0.22);
+  }
+
+  .timer-btn.primary {
+    background: var(--teal);
+  }
+
+  .timer-btn.primary:hover {
+    background: var(--teal-hover);
+  }
+
+  .preset-bar {
+    background: var(--navy-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6px 24px;
+  }
+
+  .preset-inner {
+    max-width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 12px;
+    color: #94A3B8;
+  }
+
+  .preset-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .preset-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #E2E8F0;
+    padding: 3px 9px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .preset-btn:hover {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: #FFFFFF;
+  }
+
+  .vault-trigger {
+    background: var(--teal);
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: var(--shadow-sm);
+    transition: background 0.15s;
+  }
+
+  .vault-trigger:hover {
+    background: var(--teal-hover);
+  }
+
+  /* MODULE NAVIGATION TABS */
+  .nav-bar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .nav-inner {
+    max-width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    overflow-x: auto;
+    gap: 6px;
+  }
+
+  .nav-tab {
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 14px 16px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.15s;
+  }
+
+  .nav-tab:hover {
+    color: var(--navy);
+    background: var(--surface-alt);
+  }
+
+  .nav-tab.active {
+    color: var(--teal);
+    border-bottom-color: var(--teal);
+    background: var(--teal-light);
+  }
+
+  .nav-time {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: #E2E8F0;
+    color: #475569;
+  }
+
+  .nav-tab.active .nav-time {
+    background: var(--teal);
+    color: #FFFFFF;
+  }
+
+  /* MAIN CONTAINER */
+  .main-container {
+    max-width: 1360px;
+    margin: 24px auto 60px;
+    padding: 0 24px;
+  }
+
+  .module-section {
+    display: none;
+  }
+
+  .module-section.active {
+    display: block;
+    animation: fadeIn 0.2s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* SECTION HEADERS & CARDS */
+  .section-banner {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--teal);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .section-banner h2 {
+    font-size: 20px;
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .section-banner p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin-top: 3px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    gap: 10px;
+  }
+
+  .card-title {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  /* BUTTONS */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background: var(--surface-alt);
+    border-color: #CBD5E1;
+  }
+
+  .btn-primary {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: #FFFFFF;
+  }
+
+  .btn-primary:hover {
+    background: var(--teal-hover);
+  }
+
+  .btn-navy {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #FFFFFF;
+  }
+
+  .btn-navy:hover {
+    background: var(--navy-light);
+  }
+
+  .btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  /* GRID HELPERS */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  @media (max-width: 1100px) {
+    .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 780px) {
+    .grid-2, .grid-3, .grid-5 { grid-template-columns: 1fr; }
+  }
+
+  /* MODULE 1: ICEBREAKER */
+  .prompt-pillar {
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--navy);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+  }
+
+  .pillar-num {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--teal);
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .pillar-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .pillar-q {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.45;
+  }
+
+  .learner-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .learner-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .learner-dept {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--teal);
+    background: var(--teal-light);
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+
+  .field-group {
+    margin-bottom: 12px;
+  }
+
+  .field-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .field-input, .field-textarea {
+    width: 100%;
+    border: 1px solid #CBD5E1;
+    border-radius: 7px;
+    padding: 8px 10px;
+    font-size: 13px;
+    font-family: inherit;
+    color: var(--text);
+    background: #FFFFFF;
+    transition: border-color 0.15s;
+  }
+
+  .field-input:focus, .field-textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(0, 122, 104, 0.12);
+  }
+
+  .field-textarea {
+    resize: vertical;
+    min-height: 58px;
+  }
+
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+  }
+
+  .focus-chip {
+    font-size: 11.5px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    border: 1px solid #CBD5E1;
+    background: var(--surface-alt);
+    color: var(--text-muted);
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.15s;
+  }
+
+  .focus-chip.selected {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+
+  /* MODULE 2: LISTENING LAB */
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    background: #000;
+    margin-bottom: 12px;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .transcript-box {
+    max-height: 360px;
+    overflow-y: auto;
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+
+  .transcript-line {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #E2E8F0;
+  }
+
+  .ts-badge {
+    font-family: monospace;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--teal);
+    background: var(--teal-light);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 6px;
+  }
+
+  .vocab-highlight {
+    background: #FEF3C7;
+    border-bottom: 2px solid #D97706;
+    font-weight: 600;
+    padding: 0 3px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .vocab-highlight:hover {
+    background: #FDE68A;
+  }
+
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  @media (max-width: 780px) {
+    .vocab-grid { grid-template-columns: 1fr; }
+  }
+
+  .vocab-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px;
+    background: var(--surface);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .vocab-card:hover, .vocab-card.active-card {
+    border-color: var(--teal);
+    background: var(--teal-light);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .vocab-term-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  .vocab-term {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .vocab-kor {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--teal);
+  }
+
+  .vocab-eng {
+    font-size: 12.5px;
+    color: var(--text-muted);
+  }
+
+  .inspector-box {
+    margin-top: 14px;
+    background: var(--navy);
+    color: #FFFFFF;
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+  }
+
+  .inspector-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #5EEAD4;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  /* MODULE 3: DIRECT VS EXECUTIVE & TOOLKIT */
+  .makeover-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    background: var(--surface);
+    margin-bottom: 12px;
+  }
+
+  .kor-cue {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .direct-box {
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+    color: #991B1B;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .tag-direct {
+    font-size: 10.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: #DC2626;
+    color: #FFF;
+    padding: 2px 7px;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .exec-box {
+    background: var(--teal-light);
+    border: 1px solid var(--teal-border);
+    color: #064E3B;
+    padding: 9px 12px;
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-weight: 600;
+    display: none;
+  }
+
+  .exec-box.revealed {
+    display: block;
+  }
+
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+
+  .filter-btn {
+    padding: 5px 11px;
+    border-radius: 999px;
+    border: 1px solid #CBD5E1;
+    background: var(--surface-alt);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+  }
+
+  .filter-btn.active {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #FFFFFF;
+  }
+
+  .toolkit-item {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px;
+    background: var(--surface);
+  }
+
+  .toolkit-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  .toolkit-word {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .toolkit-pos {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: var(--blue-bg);
+    color: var(--blue);
+  }
+
+  .toolkit-kor {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--teal);
+    margin-bottom: 3px;
+  }
+
+  .toolkit-eng {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+
+  .toolkit-ex {
+    font-size: 12.5px;
+    color: var(--text);
+    background: var(--surface-alt);
+    padding: 6px 9px;
+    border-radius: 6px;
+    border-left: 3px solid var(--teal);
+  }
+
+  /* TABLE */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  .data-table th {
+    background: var(--navy);
+    color: #FFFFFF;
+    text-align: left;
+    padding: 9px 12px;
+    font-weight: 600;
+  }
+
+  .data-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  .data-table tr:nth-child(even) td {
+    background: var(--surface-alt);
+  }
+
+  /* MODULE 4: ACTION SPEECH */
+  .atec-step {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    background: var(--surface-alt);
+  }
+
+  .atec-letter {
+    display: inline-flex;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: var(--teal);
+    color: #FFFFFF;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+  }
+
+  /* MODULE 5: 3 MINI ROLE-PLAYS */
+  .round-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .round-tab {
+    flex: 1;
+    min-width: 220px;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 16px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .round-tab:hover {
+    border-color: var(--teal);
+  }
+
+  .round-tab.active {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #FFFFFF;
+  }
+
+  .round-tab .r-label {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--teal);
+    margin-bottom: 2px;
+  }
+
+  .round-tab.active .r-label {
+    color: #5EEAD4;
+  }
+
+  .round-tab .r-name {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .round-stage {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--teal);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .role-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 14px;
+  }
+
+  @media (max-width: 780px) {
+    .role-split { grid-template-columns: 1fr; }
+  }
+
+  .role-box-hq {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+  }
+
+  .role-box-learner {
+    background: var(--teal-light);
+    border: 1px solid var(--teal-border);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+  }
+
+  /* SLIDE-OVER DRAWER & MODAL */
+  .backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(9, 23, 36, 0.55);
+    z-index: 50;
+  }
+
+  .backdrop.open {
+    display: block;
+  }
+
+  .drawer {
+    position: fixed;
+    top: 0;
+    right: -480px;
+    width: 460px;
+    max-width: 94vw;
+    height: 100vh;
+    background: var(--surface);
+    z-index: 60;
+    box-shadow: var(--shadow-lg);
+    transition: right 0.25s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .drawer.open {
+    right: 0;
+  }
+
+  .drawer-header {
+    background: var(--navy);
+    color: #FFFFFF;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .drawer-body {
+    padding: 16px 20px;
+    overflow-y: auto;
+    flex: 1;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 580px;
+    max-width: 92vw;
+    max-height: 86vh;
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    z-index: 70;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .modal.open {
+    display: flex;
+  }
+
+  .modal-header {
+    background: var(--navy);
+    color: #FFFFFF;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal-body {
+    padding: 18px 20px;
+    overflow-y: auto;
+  }
+
+  .close-x {
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  .export-pre {
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    font-family: ui-monospace, monospace;
+    font-size: 12.5px;
+    white-space: pre-wrap;
+    max-height: 340px;
+    overflow-y: auto;
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY HEADER -->
+<header class="app-header">
+  <div class="header-inner">
+    <div class="brand-area">
+      <div class="brand-badge">N</div>
+      <div>
+        <div class="brand-title">Novelis Korea | Executive English Intensive</div>
+        <div class="brand-sub">Session 1 (Kickoff) • Wed, Nov 25, 2026 • 4:30 PM – 7:30 PM • Yonsei Severance Bldg 23F</div>
+      </div>
+    </div>
+
+    <div class="learner-pills">
+      <button type="button" class="learner-pill" onclick="window.showLearnerModal(0)">
+        <strong>강병규</strong> <span class="role-tag">Automotive Sales</span>
+      </button>
+      <button type="button" class="learner-pill" onclick="window.showLearnerModal(1)">
+        <strong>김명식</strong> <span class="role-tag">Beverage Packaging</span>
+      </button>
+      <button type="button" class="learner-pill" onclick="window.showLearnerModal(2)">
+        <strong>이경연</strong> <span class="role-tag">Customs &amp; Trade</span>
+      </button>
+    </div>
+
+    <div class="header-controls">
+      <div class="timer-box">
+        <span id="timerDisplay" class="timer-display">15:00</span>
+        <button type="button" id="timerToggleBtn" class="timer-btn primary" onclick="window.toggleTimer()">Start</button>
+        <button type="button" class="timer-btn" onclick="window.resetTimer()">Reset</button>
+      </div>
+      <button type="button" class="vault-trigger" onclick="window.openDrawer()">
+        Expression Vault (KOR/ENG)
+      </button>
+    </div>
+  </div>
+
+  <div class="preset-bar">
+    <div class="preset-inner">
+      <span><strong>Block Timer Presets:</strong></span>
+      <div class="preset-group">
+        <button type="button" class="preset-btn" onclick="window.setTimer(15, 0)">1. Icebreaker (15m)</button>
+        <button type="button" class="preset-btn" onclick="window.setTimer(35, 1)">2. Listening Lab (35m)</button>
+        <button type="button" class="preset-btn" onclick="window.setTimer(50, 2)">3. Strategic Meetings (50m)</button>
+        <button type="button" class="preset-btn" onclick="window.setTimer(10, null)">Break (10m)</button>
+        <button type="button" class="preset-btn" onclick="window.setTimer(45, 3)">4. Action Speech (45m)</button>
+        <button type="button" class="preset-btn" onclick="window.setTimer(25, 4)">5. Mini Role-Plays (25m)</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MODULE NAVIGATION TABS -->
+<nav class="nav-bar" aria-label="Session Modules">
+  <div class="nav-inner">
+    <button type="button" class="nav-tab active" data-tab="0" onclick="window.switchTab(0)">
+      1. Icebreaker &amp; Discovery <span class="nav-time">15m</span>
+    </button>
+    <button type="button" class="nav-tab" data-tab="1" onclick="window.switchTab(1)">
+      2. Executive Listening Lab <span class="nav-time">35m</span>
+    </button>
+    <button type="button" class="nav-tab" data-tab="2" onclick="window.switchTab(2)">
+      3. Strategic Meetings &amp; Persuasion <span class="nav-time">50m</span>
+    </button>
+    <button type="button" class="nav-tab" data-tab="3" onclick="window.switchTab(3)">
+      4. Action Speech &amp; Reporting <span class="nav-time">45m</span>
+    </button>
+    <button type="button" class="nav-tab" data-tab="4" onclick="window.switchTab(4)">
+      5. 1-on-1 Mini Role-Plays &amp; Debrief <span class="nav-time">25m</span>
+    </button>
+  </div>
+</nav>
+
+<!-- MAIN WORKSPACE -->
+<main class="main-container">
+
+  <!-- ==================== MODULE 1: ICEBREAKER ==================== -->
+  <section id="module-0" class="module-section active">
+    <div class="section-banner">
+      <div>
+        <h2>Part 1. Executive Icebreaker &amp; Background Discovery (15 mins)</h2>
+        <p>Conversational warm-up to build rapport and map each participant's role, English touchpoints, goals, background, and personal interests.</p>
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <button type="button" class="btn btn-sm" onclick="window.fillSampleIcebreaker()">Fill Sample Prompts</button>
+        <button type="button" class="btn btn-primary btn-sm" onclick="window.exportIcebreaker()">Export Learner Notes</button>
+      </div>
+    </div>
+
+    <!-- 5 CONVERSATIONAL PILLARS -->
+    <div class="card" style="margin-bottom:20px;">
+      <div class="card-header">
+        <span class="card-title">Guided Roundtable Conversation Prompts (3–4 mins per person)</span>
+        <span style="font-size:12px; color:var(--text-muted);">Keep it conversational—no formal testing</span>
+      </div>
+      <div class="grid-5">
+        <div class="prompt-pillar">
+          <div class="pillar-num">Topic 01 • Role</div>
+          <div class="pillar-title">What You Do</div>
+          <div class="pillar-q">"Walk us through your day-to-day scope at Novelis Korea. What accounts, product lines, or trade lanes are on your plate right now?"</div>
+        </div>
+        <div class="prompt-pillar">
+          <div class="pillar-num">Topic 02 • Touchpoints</div>
+          <div class="pillar-title">When You Use English</div>
+          <div class="pillar-q">"Who do you speak or write to in English—U.S./regional HQ, global OEMs, or customs partners—and in what formats (calls, emails, reviews)?"</div>
+        </div>
+        <div class="prompt-pillar">
+          <div class="pillar-num">Topic 03 • Priorities</div>
+          <div class="pillar-title">Focus Areas</div>
+          <div class="pillar-q">"Over our 12 sessions, what specific moments do you want to master—executive updates, pushing back diplomatically, or catching fast speech?"</div>
+        </div>
+        <div class="prompt-pillar">
+          <div class="pillar-num">Topic 04 • Background</div>
+          <div class="pillar-title">English Experience</div>
+          <div class="pillar-q">"How did you build your English so far? Have you lived, studied, or worked abroad, or learned mainly on the job?"</div>
+        </div>
+        <div class="prompt-pillar">
+          <div class="pillar-num">Topic 05 • Personal</div>
+          <div class="pillar-title">Hobbies &amp; Recharge</div>
+          <div class="pillar-q">"Outside of rolled aluminum and Q4 targets, how do you recharge on weekends—sports, travel, food, or hobbies?"</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 LEARNER DISCOVERY CARDS -->
+    <div class="grid-3">
+      <!-- Learner 1 -->
+      <div class="card">
+        <div class="learner-card-top">
+          <div>
+            <div class="learner-name">강병규 (ByungGyu Kang)</div>
+            <div style="font-size:12px; color:var(--text-muted);">ByungGyu.Kang@novelis.adityabirla.com</div>
+          </div>
+          <span class="learner-dept">Automotive Sales</span>
+        </div>
+        <div class="field-group">
+          <label class="field-label">1. Current Role &amp; Key Projects</label>
+          <textarea id="l0-role" class="field-textarea" placeholder="e.g., OEM automotive sheet accounts, EV lightweighting programs..."></textarea>
+        </div>
+        <div class="field-group">
+          <label class="field-label">2. When &amp; With Whom They Use English</label>
+          <input id="l0-when" type="text" class="field-input" placeholder="e.g., Weekly global pricing calls, HQ engineering syncs..." />
+        </div>
+        <div class="field-group">
+          <label class="field-label">3. Priority Focus Areas (Click to toggle)</label>
+          <div class="chip-row" id="l0-chips">
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Executive Briefings</span>
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Stakeholder Persuasion</span>
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Fast Speech Listening</span>
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Price/Spec Negotiation</span>
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Diplomatic Pushback</span>
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label">4. English Background (Abroad / Study / Work)</label>
+          <input id="l0-exp" type="text" class="field-input" placeholder="e.g., Studied/lived abroad? Learned via global sales?" />
+        </div>
+        <div class="field-group" style="margin-bottom:0;">
+          <label class="field-label">5. Hobbies &amp; Interests</label>
+          <input id="l0-hobby" type="text" class="field-input" placeholder="e.g., Golf, running, travel, cars..." />
+        </div>
+      </div>
+
+      <!-- Learner 2 -->
+      <div class="card">
+        <div class="learner-card-top">
+          <div>
+            <div class="learner-name">김명식 (MyungShik Kim)</div>
+            <div style="font-size:12px; color:var(--text-muted);">myungshik.kim@novelis.adityabirla.com</div>
+          </div>
+          <span class="learner-dept">Beverage Packaging</span>
+        </div>
+        <div class="field-group">
+          <label class="field-label">1. Current Role &amp; Key Projects</label>
+          <textarea id="l1-role" class="field-textarea" placeholder="e.g., Beverage can sheet accounts, closed-loop recycling contracts..."></textarea>
+        </div>
+        <div class="field-group">
+          <label class="field-label">2. When &amp; With Whom They Use English</label>
+          <input id="l1-when" type="text" class="field-input" placeholder="e.g., Asia/U.S. commercial reviews, global beverage brand meetings..." />
+        </div>
+        <div class="field-group">
+          <label class="field-label">3. Priority Focus Areas (Click to toggle)</label>
+          <div class="chip-row" id="l1-chips">
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Executive Briefings</span>
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Stakeholder Persuasion</span>
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Fast Speech Listening</span>
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Volume/Supply Allocation</span>
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Data Storytelling</span>
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label">4. English Background (Abroad / Study / Work)</label>
+          <input id="l1-exp" type="text" class="field-input" placeholder="e.g., Overseas experience, business travel, self-study..." />
+        </div>
+        <div class="field-group" style="margin-bottom:0;">
+          <label class="field-label">5. Hobbies &amp; Interests</label>
+          <input id="l1-hobby" type="text" class="field-input" placeholder="e.g., Hiking, craft coffee, music, family activities..." />
+        </div>
+      </div>
+
+      <!-- Learner 3 -->
+      <div class="card">
+        <div class="learner-card-top">
+          <div>
+            <div class="learner-name">이경연 (KyungYeon Lee)</div>
+            <div style="font-size:12px; color:var(--text-muted);">KyungYeon.Lee@novelis.adityabirla.com</div>
+          </div>
+          <span class="learner-dept">Customs &amp; Trade</span>
+        </div>
+        <div class="field-group">
+          <label class="field-label">1. Current Role &amp; Key Projects</label>
+          <textarea id="l2-role" class="field-textarea" placeholder="e.g., Import/export compliance, FTA rules of origin, tariff risk..."></textarea>
+        </div>
+        <div class="field-group">
+          <label class="field-label">2. When &amp; With Whom They Use English</label>
+          <input id="l2-when" type="text" class="field-input" placeholder="e.g., Global trade compliance teams, logistics/customs brokers..." />
+        </div>
+        <div class="field-group">
+          <label class="field-label">3. Priority Focus Areas (Click to toggle)</label>
+          <div class="chip-row" id="l2-chips">
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Executive Briefings</span>
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Stakeholder Persuasion</span>
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Fast Speech Listening</span>
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Explaining Regulations</span>
+            <span class="focus-chip" onclick="this.classList.toggle('selected')">Risk Escalation</span>
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label">4. English Background (Abroad / Study / Work)</label>
+          <input id="l2-exp" type="text" class="field-input" placeholder="e.g., Exchange program, trade documentation, international calls..." />
+        </div>
+        <div class="field-group" style="margin-bottom:0;">
+          <label class="field-label">5. Hobbies &amp; Interests</label>
+          <input id="l2-hobby" type="text" class="field-input" placeholder="e.g., Reading, cinema, pilates, cooking..." />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MODULE 2: LISTENING LAB ==================== -->
+  <section id="module-1" class="module-section">
+    <div class="section-banner">
+      <div>
+        <h2>Part 2. Executive Listening Lab — CNN Primetime Broadcast (35 mins)</h2>
+        <p>Comprehending rapid native news &amp; panel debate on corporate governance, export controls, and boardroom intervention.</p>
+      </div>
+      <a href="https://www.youtube.com/watch?v=-iQ2o_eon-w" target="_blank" rel="noopener" class="btn btn-navy btn-sm">
+        Open Video on YouTube ↗
+      </a>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:20px;">
+      <!-- LEFT: VIDEO & GUIDED TRANSCRIPT -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">CNN Broadcast &amp; Guided Transcript (00:00 – 03:20)</span>
+          <span style="font-size:12px; color:var(--text-muted);">Click highlighted terms for ENG/KOR breakdown</span>
+        </div>
+
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/-iQ2o_eon-w" title="CNN Primetime Roundup" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="transcript-box">
+          <div class="transcript-line">
+            <span class="ts-badge">[00:00]</span> Welcome to The Lead. I'm Erica Hill in for Jake Tapper. We start with our tech lead and markets surging today after Jensen Huang was <span class="vocab-highlight" onclick="window.selectVocab(0)">reinstated</span> as CEO of Nvidia. But could it come <span class="vocab-highlight" onclick="window.selectVocab(1)">at the cost of</span> national security?
+          </div>
+          <div class="transcript-line">
+            <span class="ts-badge">[00:13]</span> Huang resigned, you may recall, just 11 days ago <span class="vocab-highlight" onclick="window.selectVocab(2)">amid</span> reports of his affair with a woman the U.S. suspected was a Chinese spy. Today, though, he's back in charge of the tech giant, greeted with cheers from employees despite <span class="vocab-highlight" onclick="window.selectVocab(4)">looming</span> questions about whether Huang knowingly or not helped China obtain some of Nvidia's most advanced chips <span class="vocab-highlight" onclick="window.selectVocab(3)">in violation of</span> U.S. export restrictions.
+          </div>
+          <div class="transcript-line">
+            <span class="ts-badge">[00:55]</span> So given all of this uncertainty, what—or should we say who—<span class="vocab-highlight" onclick="window.selectVocab(5)">prompted</span> this stunning reversal from Nvidia's board? Apparently President Donald Trump. This morning, Trump told CNBC he spoke to the board directly about reinstating Huang, and it is worth noting the board had no obvious successor lined up, which may have limited their options.
+          </div>
+          <div class="transcript-line">
+            <span class="ts-badge">[01:45]</span> A source tells CNN Trump stepped in because he has been increasingly bothered by the U.S. market continuing to take hits, insisting to advisers that Huang needed to be reinstated to help steady the market. And indeed, after his return today, the markets did bounce back. You see the result, but that doesn't erase the very serious national security concerns, even as the administration laid the groundwork to <span class="vocab-highlight" onclick="window.selectVocab(6)">downplay</span> those concerns.
+          </div>
+          <div class="transcript-line">
+            <span class="ts-badge">[02:18]</span> Republican Senator Pete Ricketts of Nebraska wrote: "Nvidia's decision today doesn't excuse Jensen Huang from testifying before Congress. It also doesn't <span class="vocab-highlight" onclick="window.selectVocab(7)">absolve</span> Nvidia of answering for national security concerns and unaccounted-for chips."
+          </div>
+          <div class="transcript-line" style="border-bottom:none; margin-bottom:0;">
+            <span class="ts-badge">[02:53]</span> Congressman: "Well, I think we're both right. Look, we need to <span class="vocab-highlight" onclick="window.selectVocab(8)">get to the bottom of</span> this to see if there was some kind of breach... later panel notes: this is a giant <span class="vocab-highlight" onclick="window.selectVocab(9)">Pandora's box</span>, the argument doesn't <span class="vocab-highlight" onclick="window.selectVocab(10)">pass the sniff test</span>, and intelligence cannot issue a <span class="vocab-highlight" onclick="window.selectVocab(11)">blank check</span>."
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: BILINGUAL VOCABULARY & INSPECTOR -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">A &amp; B. Key Vocabulary &amp; Idioms (ENG + KOR)</span>
+          <span style="font-size:12px; color:var(--teal); font-weight:600;">Click any card to inspect</span>
+        </div>
+
+        <div id="vocabGrid" class="vocab-grid"></div>
+
+        <div id="vocabInspector" class="inspector-box">
+          <div class="inspector-label">Selected Term Context &amp; Novelis Application</div>
+          <div id="inspectorTitle" style="font-size:15px; font-weight:700; margin-bottom:4px;">Reinstate — 복직시키다, 원래 지위로 되돌리다</div>
+          <div id="inspectorBody" style="font-size:13px; color:#E2E8F0;">
+            <strong>Broadcast:</strong> "Markets surging today after Jensen Huang was reinstated as CEO of Nvidia."<br/>
+            <strong>Novelis Use:</strong> "Following the quality audit, the supplier was reinstated to our approved vendor list."
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIGITAL VIDEO TALK WORKSHEET -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">C &amp; D. Video Talk Worksheet — Executive Summary &amp; Strategic Takeaway</span>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span id="summaryTimerDisplay" style="font-family:monospace; font-weight:700; color:var(--navy);">01:00</span>
+          <button type="button" class="btn btn-primary btn-sm" onclick="window.startSummaryTimer()">Start 60s Summary Drill</button>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="field-group" style="margin-bottom:0;">
+          <label class="field-label">C. Core Summary (60-Second Executive Brief — What happened &amp; why is it controversial?)</label>
+          <textarea class="field-textarea" style="min-height:95px;" placeholder="Summarize the core tension between market stability, corporate governance bylaws, and U.S. export control / national security oversight..."></textarea>
+        </div>
+        <div class="field-group" style="margin-bottom:0;">
+          <label class="field-label">D. Thoughts &amp; Novelis Parallel (Compliance vs. Commercial Pressure)</label>
+          <textarea class="field-textarea" style="min-height:95px;" placeholder="Discussion prompt: In global manufacturing and trade compliance (e.g., export rules, origin audits, OEM specs), how do leaders balance urgent commercial demands with strict governance?"></textarea>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MODULE 3: STRATEGIC MEETINGS ==================== -->
+  <section id="module-2" class="module-section">
+    <div class="section-banner">
+      <div>
+        <h2>Part 3. Strategic Meetings &amp; Stakeholder Persuasion (50 mins)</h2>
+        <p>Upgrading direct Korean-to-English phrasing into natural, plainspoken executive English, plus high-impact verbs, prepositions, and idioms with KOR definitions.</p>
+      </div>
+      <button type="button" class="btn btn-primary btn-sm" onclick="window.revealAllMakeovers()">Reveal All Executive Upgrades</button>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:20px;">
+      <!-- LEFT: DIRECT ENGLISH VS EXECUTIVE ENGLISH -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Direct English vs. Natural Executive English</span>
+          <span style="font-size:12px; color:var(--text-muted);">Click Upgrade to see natural phrasing</span>
+        </div>
+        <div id="makeoverList"></div>
+      </div>
+
+      <!-- RIGHT: EXECUTIVE LANGUAGE TOOLKIT (ENG + KOR) -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Executive Language Toolkit (ENG + KOR Definitions)</span>
+        </div>
+        <div class="filter-bar" id="toolkitFilters">
+          <button type="button" class="filter-btn active" onclick="window.filterToolkit('ALL', this)">All (18)</button>
+          <button type="button" class="filter-btn" onclick="window.filterToolkit('Verb', this)">Strong Verbs</button>
+          <button type="button" class="filter-btn" onclick="window.filterToolkit('Preposition', this)">Prepositions</button>
+          <button type="button" class="filter-btn" onclick="window.filterToolkit('Adjective', this)">Adjectives</button>
+          <button type="button" class="filter-btn" onclick="window.filterToolkit('Adverb', this)">Adverbs</button>
+          <button type="button" class="filter-btn" onclick="window.filterToolkit('Idiom', this)">Business Idioms</button>
+        </div>
+        <div id="toolkitGrid" style="display:grid; grid-template-columns:1fr; gap:10px; max-height:660px; overflow-y:auto; padding-right:4px;"></div>
+      </div>
+    </div>
+
+    <!-- FIVE CRITICAL PREPOSITION DISTINCTIONS -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Five Critical Business Preposition Distinctions (ENG + KOR)</span>
+        <span style="font-size:12px; color:var(--text-muted);">High-frequency distinctions for contracts, reporting, and executive updates</span>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Phrase A (ENG / KOR)</th>
+              <th>Phrase B (ENG / KOR)</th>
+              <th>Key Nuance &amp; Usage Rule</th>
+              <th>Novelis Executive Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Due to</strong><br/><span style="color:var(--teal); font-weight:600;">~ 때문에 (원인)</span></td>
+              <td><strong>In response to</strong><br/><span style="color:var(--teal); font-weight:600;">~에 대응하여 (반응/조치)</span></td>
+              <td><em>Due to</em> identifies a cause; <em>in response to</em> identifies an action or reaction taken afterward.</td>
+              <td>"<strong>Due to</strong> port congestion, we adjusted dispatch schedules <strong>in response to</strong> client inventory alerts."</td>
+            </tr>
+            <tr>
+              <td><strong>In line with</strong><br/><span style="color:var(--teal); font-weight:600;">~와 일치하여 / 부합하여</span></td>
+              <td><strong>In proportion to</strong><br/><span style="color:var(--teal); font-weight:600;">~에 비례하여</span></td>
+              <td><em>In line with</em> means consistent with a plan/target; <em>in proportion to</em> expresses a relative mathematical ratio.</td>
+              <td>"Recycled content is <strong>in line with</strong> our 2027 target, and rebates scale <strong>in proportion to</strong> scrap return volume."</td>
+            </tr>
+            <tr>
+              <td><strong>Subject to</strong><br/><span style="color:var(--teal); font-weight:600;">~을 조건으로 / 승인 하에</span></td>
+              <td><strong>Dependent on</strong><br/><span style="color:var(--teal); font-weight:600;">~에 달려 있는 / 의존하는</span></td>
+              <td>Both express conditions, but <em>subject to</em> is standard in formal contracts, legal clauses, and executive approvals.</td>
+              <td>"The revised Q1 alloy pricing is <strong>subject to</strong> regional VP approval and <strong>dependent on</strong> LME aluminum benchmarks."</td>
+            </tr>
+            <tr>
+              <td><strong>Prior to</strong><br/><span style="color:var(--teal); font-weight:600;">~ 이전에 (시점)</span></td>
+              <td><strong>In advance of</strong><br/><span style="color:var(--teal); font-weight:600;">~에 앞서 (사전 준비 강조)</span></td>
+              <td>Both mean before; <em>in advance of</em> emphasizes proactive preparation ahead of an upcoming milestone.</td>
+              <td>"Please circulate the tariff impact memo <strong>in advance of</strong> Friday's review, and confirm figures <strong>prior to</strong> noon."</td>
+            </tr>
+            <tr>
+              <td><strong>In lieu of</strong><br/><span style="color:var(--teal); font-weight:600;">~ 대신에 (대체)</span></td>
+              <td><strong>In addition to</strong><br/><span style="color:var(--teal); font-weight:600;">~뿐만 아니라 / ~에 더하여</span></td>
+              <td><em>In lieu of</em> replaces one item with another; <em>in addition to</em> adds something extra on top.</td>
+              <td>"We proposed a volume rebate <strong>in lieu of</strong> a unit price cut, <strong>in addition to</strong> extended payment terms."</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MODULE 4: ACTION SPEECH ==================== -->
+  <section id="module-3" class="module-section">
+    <div class="section-banner">
+      <div>
+        <h2>Part 4. Action Speech &amp; Logical Executive Reporting (45 mins)</h2>
+        <p>Delivering structured, 2-minute executive briefings using the Power Position, ATEC Formula, and precise data commentary.</p>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span id="speechTimerDisplay" style="font-family:monospace; font-size:16px; font-weight:700; color:var(--navy);">02:00</span>
+        <button type="button" class="btn btn-primary btn-sm" onclick="window.startSpeechTimer()">Start 2-Min Speech Timer</button>
+      </div>
+    </div>
+
+    <!-- ATEC FORMULA -->
+    <div class="card" style="margin-bottom:20px;">
+      <div class="card-header">
+        <span class="card-title">The ATEC Executive Briefing Formula &amp; Data Commentary</span>
+        <span style="font-size:12px; color:var(--text-muted);">Stand in the Power Position • Eye contact • Pause before key numbers</span>
+      </div>
+      <div class="grid-2" style="margin-bottom:14px;">
+        <div class="atec-step">
+          <div style="font-weight:700; color:var(--navy); margin-bottom:4px;"><span class="atec-letter">A</span> Attention (Hook &amp; Bottom-Line Up Front)</div>
+          <div style="font-size:13px; color:var(--text-muted);">Capture executive focus immediately with the core commercial or operational headline.<br/><em>"With respect to Q1 automotive sheet demand, we are seeing an accelerated shift toward high-recycled-content alloys."</em></div>
+        </div>
+        <div class="atec-step">
+          <div style="font-weight:700; color:var(--navy); margin-bottom:4px;"><span class="atec-letter">T</span> Topic (Scope &amp; Strategic Framing)</div>
+          <div style="font-size:13px; color:var(--text-muted);">Define the exact scope of your update.<br/><em>"Today, I want to walk you through three key drivers impacting our margins and delivery timeline."</em></div>
+        </div>
+        <div class="atec-step">
+          <div style="font-weight:700; color:var(--navy); margin-bottom:4px;"><span class="atec-letter">E</span> Evidence / Experience (Data &amp; Root Cause)</div>
+          <div style="font-size:13px; color:var(--text-muted);">Substantiate with metrics, trends, and cause-and-effect prepositions.<br/><em>"Shipments rose substantially by 12% in Q3, owing to stronger EV platform orders, though freight costs climbed marginally."</em></div>
+        </div>
+        <div class="atec-step">
+          <div style="font-weight:700; color:var(--navy); margin-bottom:4px;"><span class="atec-letter">C</span> Closing (Recommendation &amp; Next Step)</div>
+          <div style="font-size:13px; color:var(--text-muted);">End decisively with a clear ask or decision.<br/><em>"On the basis of these figures, I recommend locking in Q1 rolling capacity prior to December 15."</em></div>
+        </div>
+      </div>
+
+      <div style="background:var(--surface-alt); border:1px solid var(--border); border-radius:8px; padding:12px; font-size:12.5px;">
+        <strong>Data &amp; Trend Phrases (Sec. 4):</strong>
+        <span style="color:var(--teal); font-weight:600;">Increases:</span> <em>a substantial increase in / an upward trend in / reached a peak in / projected to soar</em> &nbsp;|&nbsp;
+        <span style="color:var(--red); font-weight:600;">Decreases:</span> <em>just under target / way below expectations / downturn began in / continued to fall</em> &nbsp;|&nbsp;
+        <span style="color:var(--amber); font-weight:600;">Fluctuations:</span> <em>steady progress / slight fluctuations / remained volatile</em>
+      </div>
+    </div>
+
+    <!-- 3 DIVISION BRIEFING BUILDERS -->
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">강병규 • Automotive Sales</span>
+          <span class="learner-dept">2-Min Brief</span>
+        </div>
+        <p style="font-size:12.5px; color:var(--text-muted); margin-bottom:10px;">
+          <strong>Scenario:</strong> Brief U.S. Automotive VP on why Korean EV OEMs require tighter coil tolerances and how Novelis can capture higher margin despite LME price volatility.
+        </p>
+        <textarea class="field-textarea" style="min-height:130px;" placeholder="A (Attention): ...&#10;T (Topic): ...&#10;E (Evidence/Data): ...&#10;C (Closing Ask): ..."></textarea>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">김명식 • Beverage Packaging</span>
+          <span class="learner-dept">2-Min Brief</span>
+        </div>
+        <p style="font-size:12.5px; color:var(--text-muted); margin-bottom:10px;">
+          <strong>Scenario:</strong> Persuade global beverage account stakeholders to commit to a multi-year closed-loop UBC (used beverage can) recycling agreement in lieu of a short-term discount.
+        </p>
+        <textarea class="field-textarea" style="min-height:130px;" placeholder="A (Attention): ...&#10;T (Topic): ...&#10;E (Evidence/Data): ...&#10;C (Closing Ask): ..."></textarea>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">이경연 • Customs &amp; Trade</span>
+          <span class="learner-dept">2-Min Brief</span>
+        </div>
+        <p style="font-size:12.5px; color:var(--text-muted); margin-bottom:10px;">
+          <strong>Scenario:</strong> Update leadership on upcoming FTA origin verification audits and new tariff classifications, outlining proactive steps to mitigate duty exposure.
+        </p>
+        <textarea class="field-textarea" style="min-height:130px;" placeholder="A (Attention): ...&#10;T (Topic): ...&#10;E (Evidence/Data): ...&#10;C (Closing Ask): ..."></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MODULE 5: 3 MINI ROLE-PLAYS & DEBRIEF ==================== -->
+  <section id="module-4" class="module-section">
+    <div class="section-banner">
+      <div>
+        <h2>Part 5. Rapid 1-on-1 Mini Role-Plays &amp; Coaching Debrief (25 mins)</h2>
+        <p>Three focused 4-minute 1-on-1 calls with a fast-speaking Global HQ counterpart (Instructor), followed by individualized feedback.</p>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+        <span id="rpTimerDisplay" style="font-family:monospace; font-size:16px; font-weight:700; color:var(--navy);">04:00</span>
+        <button type="button" class="btn btn-navy btn-sm" onclick="window.startRpTimer()">Start 4-Min Round</button>
+        <button type="button" class="btn btn-primary btn-sm" onclick="window.exportDebrief()">Export Debrief Report</button>
+      </div>
+    </div>
+
+    <!-- ROUND SELECTOR TABS -->
+    <div class="round-tabs">
+      <button type="button" class="round-tab active" id="rtab-0" onclick="window.selectRound(0)">
+        <div class="r-label">Round 1 • 4 Mins</div>
+        <div class="r-name">강병규 (Automotive Sales)</div>
+      </button>
+      <button type="button" class="round-tab" id="rtab-1" onclick="window.selectRound(1)">
+        <div class="r-label">Round 2 • 4 Mins</div>
+        <div class="r-name">김명식 (Beverage Packaging)</div>
+      </button>
+      <button type="button" class="round-tab" id="rtab-2" onclick="window.selectRound(2)">
+        <div class="r-label">Round 3 • 4 Mins</div>
+        <div class="r-name">이경연 (Customs &amp; Trade)</div>
+      </button>
+    </div>
+
+    <!-- ACTIVE ROUND STAGE -->
+    <div id="roundStage" class="round-stage"></div>
+
+    <!-- COACHING DEBRIEF SCORECARDS (10-12 MINS) -->
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">강병규 • Debrief Notes</span>
+          <span class="learner-dept">Automotive</span>
+        </div>
+        <div class="field-group">
+          <label class="field-label">What Went Well (Strengths)</label>
+          <input id="fb0-str" type="text" class="field-input" placeholder="e.g., Calm tone, clear explanation of rolling lead time..." />
+        </div>
+        <div class="field-group" style="margin-bottom:0;">
+          <label class="field-label">Session 2 Action Target</label>
+          <input id="fb0-imp" type="text" class="field-input" placeholder="e.g., Softening pushback before stating constraints..." />
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">김명식 • Debrief Notes</span>
+          <span class="learner-dept">Beverage</span>
+        </div>
+        <div class="field-group">
+          <label class="field-label">What Went Well (Strengths)</label>
+          <input id="fb1-str" type="text" class="field-input" placeholder="e.g., Strong account protection, practical compromise..." />
+        </div>
+        <div class="field-group" style="margin-bottom:0;">
+          <label class="field-label">Session 2 Action Target</label>
+          <input id="fb1-imp" type="text" class="field-input" placeholder="e.g., Holding the floor when interrupted..." />
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">이경연 • Debrief Notes</span>
+          <span class="learner-dept">Customs &amp; Trade</span>
+        </div>
+        <div class="field-group">
+          <label class="field-label">What Went Well (Strengths)</label>
+          <input id="fb2-str" type="text" class="field-input" placeholder="e.g., Non-defensive clarity, exact timeline..." />
+        </div>
+        <div class="field-group" style="margin-bottom:0;">
+          <label class="field-label">Session 2 Action Target</label>
+          <input id="fb2-imp" type="text" class="field-input" placeholder="e.g., Confirming fast questions before answering..." />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- SLIDE-OVER EXPRESSION VAULT DRAWER -->
+<div id="backdrop" class="backdrop" onclick="window.closeAllOverlays()"></div>
+
+<aside id="vaultDrawer" class="drawer" aria-label="Expression Vault">
+  <div class="drawer-header">
+    <div>
+      <div style="font-weight:700; font-size:16px;">Executive Expression Vault (ENG + KOR)</div>
+      <div style="font-size:11.5px; color:#CBD5E1;">Search Verbs, Adjectives, Adverbs, Prepositions &amp; Idioms</div>
+    </div>
+    <button type="button" class="close-x" onclick="window.closeDrawer()">&times;</button>
+  </div>
+  <div class="drawer-body">
+    <input id="vaultSearchInput" type="text" class="field-input" style="margin-bottom:12px;" placeholder="Search English term, Korean meaning, or category..." oninput="window.renderVault()" />
+    <div id="vaultResults" style="display:grid; gap:10px;"></div>
+  </div>
+</aside>
+
+<!-- MODAL FOR LEARNER PROFILE & EXPORTS -->
+<div id="appModal" class="modal" role="dialog" aria-modal="true">
+  <div class="modal-header">
+    <div id="modalTitle" style="font-weight:700; font-size:15.5px;">Details</div>
+    <button type="button" class="close-x" onclick="window.closeModal()">&times;</button>
+  </div>
+  <div id="modalBody" class="modal-body"></div>
+</div>
+
+<script>
+  // ==================== DATA ====================
+  var LEARNERS = [
+    {
+      name: "강병규 (ByungGyu Kang)",
+      team: "Automotive Sales Team",
+      phone: "010-8910-6840",
+      email: "ByungGyu.Kang@novelis.adityabirla.com",
+      focus: "Presenting automotive market & EV lightweighting updates to global executives; negotiating technical specs and pricing."
+    },
+    {
+      name: "김명식 (MyungShik Kim)",
+      team: "Beverage Packaging Sales Team",
+      phone: "010-3231-1274",
+      email: "myungshik.kim@novelis.adityabirla.com",
+      focus: "Persuading global beverage stakeholders on capacity allocation, UBC recycling partnerships, and commercial terms."
+    },
+    {
+      name: "이경연 (KyungYeon Lee)",
+      team: "Customs & Trade Team",
+      phone: "010-5265-5638",
+      email: "KyungYeon.Lee@novelis.adityabirla.com",
+      focus: "Explaining FTA origin rules, tariff impacts, and customs clearance risks clearly to fast-speaking HQ leaders."
+    }
+  ];
+
+  var LISTENING_VOCAB = [
+    {
+      term: "Reinstate",
+      kor: "복직시키다, 원래 지위로 되돌리다",
+      eng: "To restore someone to a former position, rank, or status.",
+      quote: "Markets surging today after Jensen Huang was reinstated as CEO of Nvidia.",
+      novelis: "Following the quality audit, the supplier was reinstated to our approved vendor list."
+    },
+    {
+      term: "At the cost / expense of",
+      kor: "~을 희생하면서, ~을 대가로",
+      eng: "Achieving one thing by sacrificing or harming something else.",
+      quote: "Markets are surging today—but could it come at the cost of national security?",
+      novelis: "We cannot pursue short-term volume growth at the expense of product quality or safety."
+    },
+    {
+      term: "Amid",
+      kor: "~하는 가운데, ~에 둘러싸여 (혼란·논란 속)",
+      eng: "Surrounded by or happening during an atmosphere of tension or controversy.",
+      quote: "Huang resigned just 11 days ago amid reports of an undisclosed relationship.",
+      novelis: "Novelis maintained steady shipments amid global freight disruptions and LME volatility."
+    },
+    {
+      term: "In violation / breach of",
+      kor: "~을 위반하여, 저촉되어",
+      eng: "Acting against a formal law, regulation, export restriction, or contract.",
+      quote: "...whether Huang helped China obtain advanced chips in violation of U.S. export restrictions.",
+      novelis: "Any unauthorized transshipment would be in breach of our trade compliance policy."
+    },
+    {
+      term: "Looming",
+      kor: "(위협·질문 등이) 곧 닥칠 듯한, 어른거리는",
+      eng: "Appearing as a large, serious, or threatening issue on the horizon.",
+      quote: "...greeted with cheers from employees despite looming questions about spy ties.",
+      novelis: "We need a proactive plan ahead of the looming carbon border tariff adjustments."
+    },
+    {
+      term: "Prompt",
+      kor: "(행동·결정을) 촉발하다, 유도하다",
+      eng: "To cause or bring about an action, decision, or sudden reversal.",
+      quote: "So given all of this uncertainty, who prompted this stunning reversal from Nvidia's board?",
+      novelis: "Rising scrap aluminum costs prompted a mid-quarter review of our pricing structure."
+    },
+    {
+      term: "Downplay",
+      kor: "경시하다, 축소하여 말하다",
+      eng: "To make something appear less important, serious, or concerning than it is.",
+      quote: "...even as the administration laid the groundwork to downplay those security concerns.",
+      novelis: "Rather than downplaying the port delay, let's present a clear recovery schedule to the client."
+    },
+    {
+      term: "Absolve",
+      kor: "(책임·의무를) 면제하다, 벗어나게 하다",
+      eng: "To declare someone free from blame, responsibility, or formal obligation.",
+      quote: "It also doesn't absolve Nvidia of answering for national security concerns.",
+      novelis: "Board reinstatement does not absolve management from testifying before regulators."
+    },
+    {
+      term: "Get to the bottom of",
+      kor: "~의 진상을 규명하다, 근본 원인을 파악하다",
+      eng: "To investigate thoroughly until the real cause or truth is uncovered.",
+      quote: "We need to get to the bottom of this to see if there was some kind of breach.",
+      novelis: "Engineering and trade compliance are working together to get to the bottom of the spec discrepancy."
+    },
+    {
+      term: "Pandora's box",
+      kor: "판도라의 상자 (건드리면 걷잡을 수 없는 문제)",
+      eng: "A decision or action that triggers many unforeseen and uncontrollable problems.",
+      quote: "This is a giant Pandora's box, and it has been opened.",
+      novelis: "Granting an ad-hoc price exception for one OEM could open a Pandora's box across all accounts."
+    },
+    {
+      term: "Pass the sniff test",
+      kor: "상식적인 검증을 통과하다 (미심쩍지 않다)",
+      eng: "To seem credible, honest, or plausible upon initial common-sense inspection.",
+      quote: "That whole argument just doesn't pass the sniff test.",
+      novelis: "The supplier's explanation for the missing certificate of origin didn't pass the sniff test."
+    },
+    {
+      term: "Blank check",
+      kor: "백지수표 (무제한 재량권·무조건적 보증)",
+      eng: "Unconditional approval or unlimited freedom to act without oversight.",
+      quote: "I don't understand how such a blank check could be given as far as that assurance was.",
+      novelis: "HQ will not give a blank check on capital expenditure without measurable ROI milestones."
+    }
+  ];
+
+  var MAKEOVERS = [
+    {
+      kor: "아쉽게도 주신 제안으로는 진행이 어려울 것 같습니다.",
+      direct: "Your suggestion is not helpful.",
+      exec: "Thanks for the suggestion, though I don't think that approach will work for us right now. We're going to look at a few other options."
+    },
+    {
+      kor: "하루 만에 주문을 처리하기는 어렵습니다.",
+      direct: "We cannot process your order in a day.",
+      exec: "I know this is urgent, but we can't turn that order around in 24 hours. The earliest we can ship is Thursday."
+    },
+    {
+      kor: "저희가 기대했던 방향과는 조금 다르게 흘러가는 것 같습니다.",
+      direct: "This is not what I expected.",
+      exec: "This isn't quite what we had in mind—can we step back and look at the original plan?"
+    },
+    {
+      kor: "발표 자료의 그 부분은 수정이 좀 필요해 보입니다.",
+      direct: "You should fix this part of your presentation.",
+      exec: "This slide would be much stronger if we added the Q1 regional volume numbers to back it up."
+    },
+    {
+      kor: "추가 슬라이드 2장은 왜 들어갔는지 알 수 있을까요?",
+      direct: "Why do you add those extra 2 slides like that?",
+      exec: "Can you walk me through why you added these two slides and how they fit into the main takeaway?"
+    },
+    {
+      kor: "다른 의견 없습니다. 계속 진행해 주세요.",
+      direct: "We agree, just go, just go.",
+      exec: "We're on the same page. Nothing else from my side—please go ahead."
+    },
+    {
+      kor: "빨리 진행해 주실 수 있으십니까?",
+      direct: "Do it quickly please.",
+      exec: "Since the board review is coming up, could your team prioritize this and expedite it if possible?"
+    },
+    {
+      kor: "지금은 확실한 답변을 드리기 어렵습니다. 내부 확인 후 회신드리겠습니다.",
+      direct: "I don't have any ideas right now. We'll talk internally and tell you later.",
+      exec: "I don't have the exact number in front of me—let me check with our trade team and circle back tomorrow."
+    }
+  ];
+
+  var TOOLKIT_ITEMS = [
+    { word: "Substantiate", pos: "Verb", kor: "입증하다, 구체적 증거로 뒷받침하다", eng: "To support a claim or forecast with concrete evidence or data.", ex: "We need to substantiate our Q2 margin projection with firm OEM order commitments." },
+    { word: "Expedite", pos: "Verb", kor: "신속히 처리하다, 앞당기다", eng: "To make a process or shipment happen faster.", ex: "Customs brokers are working to expedite clearance for the urgent aluminum coil shipment." },
+    { word: "Mitigate", pos: "Verb", kor: "(위험·피해를) 완화하다, 경감하다", eng: "To reduce the severity, likelihood, or impact of a risk.", ex: "Long-term hedging contracts help mitigate our exposure to LME price swings." },
+    { word: "Align", pos: "Verb", kor: "조율하다, 의견을 일치시키다", eng: "To bring teams, priorities, or expectations into agreement.", ex: "Before pitching the client, let's align internally on minimum order quantities." },
+    { word: "Recalibrate", pos: "Verb", kor: "재조정하다, 목표·전략을 다시 맞추다", eng: "To adjust strategy, expectations, or targets in light of new conditions.", ex: "We must recalibrate our second-half production mix to reflect stronger EV demand." },
+    { word: "Escalate", pos: "Verb", kor: "상부에 보고하다, 상위 단계로 격상하다", eng: "To raise an unresolved issue to a higher level of authority.", ex: "If the port hold is not resolved by noon, we will escalate the matter to regional leadership." },
+    { word: "In line with", pos: "Preposition", kor: "~와 일치하여, ~에 부합하여", eng: "Consistent with a target, budget, or long-term strategy.", ex: "Our recycling rate in Korea is fully in line with Novelis's global sustainability roadmap." },
+    { word: "With respect to", pos: "Preposition", kor: "~에 관하여, ~의 측면에서", eng: "Regarding or concerning a specific topic.", ex: "With respect to tariff classification, our customs team has prepared a detailed memo." },
+    { word: "In light of", pos: "Preposition", kor: "~을 고려할 때, ~에 비추어 볼 때", eng: "Considering new information, data, or changing circumstances.", ex: "In light of recent freight surges, we should revisit our CIF delivery terms." },
+    { word: "Subject to", pos: "Preposition", kor: "~을 조건으로 하는, ~의 승인을 받아야 하는", eng: "Conditional upon formal approval or specific contract terms.", ex: "The revised rebate structure is subject to final sign-off from Atlanta HQ." },
+    { word: "Viable", pos: "Adjective", kor: "실행 가능한, 사업성이 있는", eng: "Capable of working successfully and sustainably.", ex: "Closed-loop scrap collection is both environmentally and commercially viable." },
+    { word: "Stringent", pos: "Adjective", kor: "엄격한, 까다로운 (규정·품질 기준)", eng: "Strict, precise, and demanding high standards.", ex: "Automotive OEMs enforce stringent surface-quality tolerances on rolled aluminum." },
+    { word: "Volatile", pos: "Adjective", kor: "변동성이 큰, 불안정한", eng: "Prone to rapid and unpredictable fluctuations.", ex: "Raw material premiums and FX rates have remained volatile throughout Q4." },
+    { word: "Substantially", pos: "Adverb", kor: "상당히, 크게", eng: "To a large, meaningful, or significant degree.", ex: "Operating efficiency improved substantially after upgrading the rolling line." },
+    { word: "Proactively", pos: "Adverb", kor: "선제적으로, 사전에 주도적으로", eng: "Acting in advance to prevent problems rather than merely reacting.", ex: "We are proactively engaging trade authorities ahead of the new FTA audit cycle." },
+    { word: "Materially", pos: "Adverb", kor: "중대하게, 실질적으로 (재무·법적 영향)", eng: "To a degree significant enough to affect business decisions or valuation.", ex: "A two-week customs delay would materially affect our quarterly revenue recognition." },
+    { word: "Get ahead of", pos: "Idiom", kor: "~에 선제 대응하다, 미리 손을 쓰다", eng: "To take early action before a problem escalates.", ex: "Let's share a transparent status update today to get ahead of any client concerns." },
+    { word: "Meet in the middle", pos: "Idiom", kor: "서로 양보하여 타협점을 찾다", eng: "To compromise so both sides reach a workable agreement.", ex: "If they commit to a 12-month volume forecast, we can meet in the middle on payment terms." }
+  ];
+
+  var ROLEPLAY_ROUNDS = [
+    {
+      title: "Round 1: Rush EV Sample Request (강병규 — Automotive Sales)",
+      subtitle: "1-on-1 Call • 4 Minutes • Observers note diplomatic pushback & pacing",
+      hqPrompt: "You are the Global Automotive VP in Atlanta. Speak briskly: 'Hey ByungGyu, Detroit just moved their EV prototype review up. I need Korea to ship 5 tons of those lightweight aluminum coils two weeks earlier than scheduled. Can you make that happen?'",
+      learnerGoal: "Push back politely without sounding defensive or flatly saying 'No.' Explain the rolling mill & quality testing lead time, and offer the earliest realistic ship date (or partial air-freight sample).",
+      phrases: ["expedite", "subject to", "prior to", "not quite what we had in mind", "in line with"]
+    },
+    {
+      title: "Round 2: Q1 Can Sheet Reallocation (김명식 — Beverage Packaging)",
+      subtitle: "1-on-1 Call • 4 Minutes • Observers note stakeholder persuasion & compromise",
+      hqPrompt: "You are the Global Commercial Director. Speak briskly: 'MyungShik, North America is short on beverage can sheet for Q1. We want to pull 15% of your Korean rolling capacity starting January. Your local bottlers can wait until Q2, right?'",
+      learnerGoal: "Protect your key Korean beverage contracts from a sudden 15% cut. Explain why cutting local supply hurts long-term shelf share, and propose a smaller, phased compromise.",
+      phrases: ["at the expense of", "mitigate", "meet in the middle", "in exchange for", "in light of"]
+    },
+    {
+      title: "Round 3: Busan Port Customs Hold (이경연 — Customs & Trade)",
+      subtitle: "1-on-1 Call • 4 Minutes • Observers note calm clarity & structured timelines",
+      hqPrompt: "You are the Global Supply Chain VP. Speak briskly: 'KyungYeon, I just saw an alert that our export container is stuck at Busan Port. Did our team mess up the tariff paperwork, and how many days is this going to cost us?'",
+      learnerGoal: "Stay calm, clarify immediately that it is a routine FTA origin verification check (not a compliance error), explain what documents are being submitted, and give a clear clearance timeline.",
+      phrases: ["on account of", "in compliance with", "rectify", "in advance of", "with respect to"]
+    }
+  ];
+
+  // ==================== NAVIGATION ====================
+  window.switchTab = function(index) {
+    var tabs = document.querySelectorAll('.nav-tab');
+    var sections = document.querySelectorAll('.module-section');
+    for (var i = 0; i < tabs.length; i++) {
+      if (i === index) {
+        tabs[i].classList.add('active');
+      } else {
+        tabs[i].classList.remove('active');
+      }
+    }
+    for (var j = 0; j < sections.length; j++) {
+      if (j === index) {
+        sections[j].classList.add('active');
+      } else {
+        sections[j].classList.remove('active');
+      }
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // ==================== HEADER TIMER ====================
+  var timerDefaultSeconds = 15 * 60;
+  var timerSeconds = timerDefaultSeconds;
+  var timerInterval = null;
+
+  function formatTime(sec) {
+    var m = Math.floor(sec / 60);
+    var s = sec % 60;
+    return (m < 10 ? '0' + m : m) + ':' + (s < 10 ? '0' + s : s);
+  }
+
+  function updateTimerDisplay() {
+    var el = document.getElementById('timerDisplay');
+    el.textContent = formatTime(timerSeconds);
+    el.classList.remove('warning', 'expired');
+    if (timerSeconds === 0) {
+      el.classList.add('expired');
+    } else if (timerSeconds <= 120) {
+      el.classList.add('warning');
+    }
+  }
+
+  window.toggleTimer = function() {
+    var btn = document.getElementById('timerToggleBtn');
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+      btn.textContent = 'Start';
+    } else {
+      btn.textContent = 'Pause';
+      timerInterval = setInterval(function() {
+        if (timerSeconds > 0) {
+          timerSeconds--;
+          updateTimerDisplay();
+        } else {
+          clearInterval(timerInterval);
+          timerInterval = null;
+          btn.textContent = 'Start';
+        }
+      }, 1000);
+    }
+  };
+
+  window.resetTimer = function() {
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+    document.getElementById('timerToggleBtn').textContent = 'Start';
+    timerSeconds = timerDefaultSeconds;
+    updateTimerDisplay();
+  };
+
+  window.setTimer = function(minutes, tabIndex) {
+    timerDefaultSeconds = minutes * 60;
+    window.resetTimer();
+    if (tabIndex !== null && tabIndex !== undefined) {
+      window.switchTab(tabIndex);
+    }
+  };
+
+  // ==================== MINI DRILL TIMERS ====================
+  var summaryTimerInt = null;
+  window.startSummaryTimer = function() {
+    if (summaryTimerInt) clearInterval(summaryTimerInt);
+    var sec = 60;
+    var el = document.getElementById('summaryTimerDisplay');
+    el.textContent = '01:00';
+    summaryTimerInt = setInterval(function() {
+      sec--;
+      el.textContent = formatTime(sec);
+      if (sec <= 0) {
+        clearInterval(summaryTimerInt);
+        summaryTimerInt = null;
+      }
+    }, 1000);
+  };
+
+  var speechTimerInt = null;
+  window.startSpeechTimer = function() {
+    if (speechTimerInt) clearInterval(speechTimerInt);
+    var sec = 120;
+    var el = document.getElementById('speechTimerDisplay');
+    el.textContent = '02:00';
+    speechTimerInt = setInterval(function() {
+      sec--;
+      el.textContent = formatTime(sec);
+      if (sec <= 0) {
+        clearInterval(speechTimerInt);
+        speechTimerInt = null;
+      }
+    }, 1000);
+  };
+
+  var rpTimerInt = null;
+  window.startRpTimer = function() {
+    if (rpTimerInt) clearInterval(rpTimerInt);
+    var sec = 240;
+    var el = document.getElementById('rpTimerDisplay');
+    el.textContent = '04:00';
+    rpTimerInt = setInterval(function() {
+      sec--;
+      el.textContent = formatTime(sec);
+      if (sec <= 0) {
+        clearInterval(rpTimerInt);
+        rpTimerInt = null;
+      }
+    }, 1000);
+  };
+
+  // ==================== MODULE 1 HELPERS ====================
+  window.fillSampleIcebreaker = function() {
+    document.getElementById('l0-role').value = "Automotive aluminum sheet accounts; supporting Korean EV & OEM platform launches.";
+    document.getElementById('l0-when').value = "Weekly calls with U.S./global automotive commercial & technical teams.";
+    document.getElementById('l0-exp').value = "On-the-job international sales communication & overseas customer visits.";
+    document.getElementById('l0-hobby').value = "Golf, weekend driving, and fitness.";
+
+    document.getElementById('l1-role').value = "Beverage can sheet sales; managing domestic/regional bottlers and UBC recycling programs.";
+    document.getElementById('l1-when').value = "Monthly Asia/HQ commercial reviews & global beverage brand negotiations.";
+    document.getElementById('l1-exp').value = "Business travel and conference calls with global beverage partners.";
+    document.getElementById('l1-hobby').value = "Hiking, specialty coffee, and spending time with family.";
+
+    document.getElementById('l2-role').value = "Import/export customs compliance, FTA origin verification, and tariff risk management.";
+    document.getElementById('l2-when').value = "Global trade compliance syncs, customs audits, and cross-border logistics calls.";
+    document.getElementById('l2-exp').value = "Trade documentation and cross-border regulatory calls in English.";
+    document.getElementById('l2-hobby').value = "Reading, cinema, and Pilates.";
+  };
+
+  window.exportIcebreaker = function() {
+    var ids = ['l0', 'l1', 'l2'];
+    var out = "NOVELIS KOREA — SESSION 1 LEARNER DISCOVERY NOTES\n==================================================\n\n";
+    for (var i = 0; i < LEARNERS.length; i++) {
+      var p = ids[i];
+      var chips = document.querySelectorAll('#' + p + '-chips .focus-chip.selected');
+      var selected = [];
+      for (var c = 0; c < chips.length; c++) selected.push(chips[c].textContent);
+      out += LEARNERS[i].name + " (" + LEARNERS[i].team + ")\n";
+      out += "• Role & Scope: " + (document.getElementById(p + '-role').value || "(Not entered)") + "\n";
+      out += "• English Touchpoints: " + (document.getElementById(p + '-when').value || "(Not entered)") + "\n";
+      out += "• Focus Priorities: " + (selected.length ? selected.join(", ") : "(None selected)") + "\n";
+      out += "• English Background: " + (document.getElementById(p + '-exp').value || "(Not entered)") + "\n";
+      out += "• Hobbies: " + (document.getElementById(p + '-hobby').value || "(Not entered)") + "\n\n";
+    }
+    window.openExportModal("Session 1 Learner Discovery Notes", out);
+  };
+
+  // ==================== MODULE 2: LISTENING VOCAB ====================
+  function renderListeningVocab() {
+    var grid = document.getElementById('vocabGrid');
+    var html = '';
+    for (var i = 0; i < LISTENING_VOCAB.length; i++) {
+      var v = LISTENING_VOCAB[i];
+      html += '<div class="vocab-card' + (i === 0 ? ' active-card' : '') + '" id="vcard-' + i + '" onclick="window.selectVocab(' + i + ')">' +
+        '<div class="vocab-term-row">' +
+          '<span class="vocab-term">' + v.term + '</span>' +
+          '<span class="vocab-kor">' + v.kor + '</span>' +
+        '</div>' +
+        '<div class="vocab-eng">' + v.eng + '</div>' +
+      '</div>';
+    }
+    grid.innerHTML = html;
+  }
+
+  window.selectVocab = function(idx) {
+    var cards = document.querySelectorAll('.vocab-card');
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].classList.remove('active-card');
+    }
+    var target = document.getElementById('vcard-' + idx);
+    if (target) target.classList.add('active-card');
+
+    var v = LISTENING_VOCAB[idx];
+    document.getElementById('inspectorTitle').textContent = v.term + " — " + v.kor;
+    document.getElementById('inspectorBody').innerHTML =
+      '<strong>Broadcast Line:</strong> "' + v.quote + '"<br/>' +
+      '<strong>Novelis Application:</strong> "' + v.novelis + '"';
+  };
+
+  // ==================== MODULE 3: DIRECT VS EXECUTIVE & TOOLKIT ====================
+  function renderMakeovers() {
+    var container = document.getElementById('makeoverList');
+    var html = '';
+    for (var i = 0; i < MAKEOVERS.length; i++) {
+      var m = MAKEOVERS[i];
+      html += '<div class="makeover-card">' +
+        '<div class="kor-cue">KR Intent: ' + m.kor + '</div>' +
+        '<div class="direct-box">' +
+          '<span><span class="tag-direct">Direct English</span> &nbsp;"' + m.direct + '"</span>' +
+          '<button type="button" class="btn btn-sm" onclick="window.toggleExecBox(' + i + ')">Upgrade</button>' +
+        '</div>' +
+        '<div id="exec-box-' + i + '" class="exec-box">' +
+          '<strong>Natural Executive:</strong> "' + m.exec + '"' +
+        '</div>' +
+      '</div>';
+    }
+    container.innerHTML = html;
+  }
+
+  window.toggleExecBox = function(idx) {
+    var box = document.getElementById('exec-box-' + idx);
+    if (box) box.classList.toggle('revealed');
+  };
+
+  window.revealAllMakeovers = function() {
+    var boxes = document.querySelectorAll('.exec-box');
+    for (var i = 0; i < boxes.length; i++) {
+      boxes[i].classList.add('revealed');
+    }
+  };
+
+  var currentToolkitFilter = 'ALL';
+  window.filterToolkit = function(cat, btnEl) {
+    currentToolkitFilter = cat;
+    var btns = document.querySelectorAll('.filter-btn');
+    for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
+    if (btnEl) btnEl.classList.add('active');
+    renderToolkit();
+  };
+
+  function renderToolkit() {
+    var grid = document.getElementById('toolkitGrid');
+    var html = '';
+    for (var i = 0; i < TOOLKIT_ITEMS.length; i++) {
+      var item = TOOLKIT_ITEMS[i];
+      if (currentToolkitFilter !== 'ALL' && item.pos !== currentToolkitFilter) continue;
+      html += '<div class="toolkit-item">' +
+        '<div class="toolkit-top">' +
+          '<span class="toolkit-word">' + item.word + '</span>' +
+          '<span class="toolkit-pos">' + item.pos + '</span>' +
+        '</div>' +
+        '<div class="toolkit-kor">' + item.kor + '</div>' +
+        '<div class="toolkit-eng">' + item.eng + '</div>' +
+        '<div class="toolkit-ex"><strong>Novelis Ex:</strong> "' + item.ex + '"</div>' +
+      '</div>';
+    }
+    grid.innerHTML = html;
+  }
+
+  // ==================== MODULE 5: MINI ROLE-PLAYS ====================
+  window.selectRound = function(idx) {
+    var tabs = document.querySelectorAll('.round-tab');
+    for (var i = 0; i < tabs.length; i++) {
+      if (i === idx) tabs[i].classList.add('active');
+      else tabs[i].classList.remove('active');
+    }
+    var r = ROLEPLAY_ROUNDS[idx];
+    var badges = '';
+    for (var p = 0; p < r.phrases.length; p++) {
+      badges += '<span style="display:inline-block; background:#FFFFFF; border:1px solid var(--teal-border); color:var(--navy); font-weight:700; font-size:12px; padding:3px 9px; border-radius:999px; margin:3px 4px 0 0;">' + r.phrases[p] + '</span>';
+    }
+    document.getElementById('roundStage').innerHTML =
+      '<div style="font-size:17px; font-weight:700; color:var(--navy);">' + r.title + '</div>' +
+      '<div style="font-size:12.5px; color:var(--text-muted); margin-top:2px;">' + r.subtitle + '</div>' +
+      '<div class="role-split">' +
+        '<div class="role-box-hq">' +
+          '<div style="font-size:11.5px; font-weight:800; text-transform:uppercase; color:var(--amber); margin-bottom:5px;">Instructor Cue (Fast-Speaking HQ Executive)</div>' +
+          '<div style="font-size:13.5px; color:var(--text);">' + r.hqPrompt + '</div>' +
+        '</div>' +
+        '<div class="role-box-learner">' +
+          '<div style="font-size:11.5px; font-weight:800; text-transform:uppercase; color:var(--teal); margin-bottom:5px;">Learner Objective &amp; Target Expressions</div>' +
+          '<div style="font-size:13.5px; color:var(--text); margin-bottom:8px;">' + r.learnerGoal + '</div>' +
+          '<div>' + badges + '</div>' +
+        '</div>' +
+      '</div>';
+  };
+
+  window.exportDebrief = function() {
+    var out = "NOVELIS KOREA — SESSION 1 COACHING DEBRIEF REPORT\n==================================================\n\n";
+    for (var i = 0; i < LEARNERS.length; i++) {
+      var str = document.getElementById('fb' + i + '-str').value || "(To be added)";
+      var imp = document.getElementById('fb' + i + '-imp').value || "(To be added)";
+      out += LEARNERS[i].name + " (" + LEARNERS[i].team + ")\n";
+      out += "• Strengths: " + str + "\n";
+      out += "• Session 2 Focus Target: " + imp + "\n\n";
+    }
+    window.openExportModal("Session 1 Debrief Report", out);
+  };
+
+  // ==================== DRAWER & MODAL ====================
+  window.renderVault = function() {
+    var q = (document.getElementById('vaultSearchInput').value || '').toLowerCase();
+    var container = document.getElementById('vaultResults');
+    var all = [];
+    for (var i = 0; i < TOOLKIT_ITEMS.length; i++) {
+      all.push({
+        word: TOOLKIT_ITEMS[i].word,
+        tag: TOOLKIT_ITEMS[i].pos,
+        kor: TOOLKIT_ITEMS[i].kor,
+        eng: TOOLKIT_ITEMS[i].eng,
+        ex: TOOLKIT_ITEMS[i].ex
+      });
+    }
+    for (var j = 0; j < LISTENING_VOCAB.length; j++) {
+      all.push({
+        word: LISTENING_VOCAB[j].term,
+        tag: "Broadcast Vocab",
+        kor: LISTENING_VOCAB[j].kor,
+        eng: LISTENING_VOCAB[j].eng,
+        ex: LISTENING_VOCAB[j].novelis
+      });
+    }
+    var html = '';
+    for (var k = 0; k < all.length; k++) {
+      var x = all[k];
+      if (q && x.word.toLowerCase().indexOf(q) === -1 && x.kor.indexOf(q) === -1 && x.eng.toLowerCase().indexOf(q) === -1 && x.tag.toLowerCase().indexOf(q) === -1) {
+        continue;
+      }
+      html += '<div class="toolkit-item">' +
+        '<div class="toolkit-top">' +
+          '<span class="toolkit-word">' + x.word + '</span>' +
+          '<span class="toolkit-pos">' + x.tag + '</span>' +
+        '</div>' +
+        '<div class="toolkit-kor">' + x.kor + '</div>' +
+        '<div class="toolkit-eng">' + x.eng + '</div>' +
+        '<div class="toolkit-ex">"' + x.ex + '"</div>' +
+      '</div>';
+    }
+    container.innerHTML = html || '<p style="font-size:13px; color:var(--text-muted);">No matching expressions found.</p>';
+  };
+
+  window.openDrawer = function() {
+    window.renderVault();
+    document.getElementById('backdrop').classList.add('open');
+    document.getElementById('vaultDrawer').classList.add('open');
+  };
+
+  window.closeDrawer = function() {
+    document.getElementById('vaultDrawer').classList.remove('open');
+    document.getElementById('backdrop').classList.remove('open');
+  };
+
+  window.showLearnerModal = function(idx) {
+    var l = LEARNERS[idx];
+    document.getElementById('modalTitle').textContent = l.name;
+    document.getElementById('modalBody').innerHTML =
+      '<p style="margin-bottom:8px;"><strong>Department:</strong> ' + l.team + '</p>' +
+      '<p style="margin-bottom:8px;"><strong>Phone:</strong> ' + l.phone + '</p>' +
+      '<p style="margin-bottom:8px;"><strong>Email:</strong> ' + l.email + '</p>' +
+      '<p style="margin-bottom:0;"><strong>Primary Coaching Focus:</strong> ' + l.focus + '</p>';
+    document.getElementById('backdrop').classList.add('open');
+    document.getElementById('appModal').classList.add('open');
+  };
+
+  window.openExportModal = function(title, text) {
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalBody').innerHTML =
+      '<pre id="exportTextPre" class="export-pre">' + text.replace(/</g, '&lt;') + '</pre>' +
+      '<button type="button" class="btn btn-primary" onclick="window.copyExportText()">Copy to Clipboard</button>';
+    document.getElementById('backdrop').classList.add('open');
+    document.getElementById('appModal').classList.add('open');
+  };
+
+  window.copyExportText = function() {
+    var text = document.getElementById('exportTextPre').textContent;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text);
+      alert("Copied to clipboard!");
+    }
+  };
+
+  window.closeModal = function() {
+    document.getElementById('appModal').classList.remove('open');
+    document.getElementById('backdrop').classList.remove('open');
+  };
+
+  window.closeAllOverlays = function() {
+    window.closeDrawer();
+    window.closeModal();
+  };
+
+  // ==================== INIT ====================
+  renderListeningVocab();
+  renderMakeovers();
+  renderToolkit();
+  window.selectRound(0);
+</script>
+</body>
+</html>
